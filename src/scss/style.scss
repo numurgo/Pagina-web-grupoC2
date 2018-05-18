@@ -1,0 +1,15 @@
+@import "reset";
+@import "variables";
+@import "html-tags";
+@import "responsive-utils";
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/FontAwesome.otf');
+}
+
+
+@import "components/header";
+@import "components/footer";
+@import "components/principal";
