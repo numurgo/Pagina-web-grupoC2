@@ -6,24 +6,56 @@
            
     }
 
-    .texto {
+    .bloques {
         box-sizing: border-box;
         padding: 20px;
 
-        .texto-principal {
+
+        .texto-imagen-principal {
             margin-bottom: 30px;
+
+            
+        @include if-mobile-landscape {
+            width: calc(50% - 20px);
+            float: left;
+            margin: 20px 0px 40px 20px;
+        }
 
             h2 {
                 font-family: $titles-font-family;
-                font-size: $font-size-h2;
+                font-size: $font-size-h3;
                 color: $red;
                 text-transform: uppercase;
                 margin-bottom: 7px;
+
+                @include if-tablet-portrait {
+                    font-size: $font-size-h1;
+                    margin-bottom: 12px;
+                 }
             }
 
             p {
                 font-family: 'Montserrat';
                 line-height: 1.6em;
+                margin-bottom: 10px;
+
+                @include if-tablet-portrait {
+                   font-size: $font-size-body;
+                   line-height: 1.5em;
+                   margin-bottom: 15px;
+                }
+            }
+
+            img {
+                width: 100%;
+            }
+            .img-hide{
+                display: none;
+                margin-top: 37px;
+
+                @include if-mobile-landscape {
+                   display: block;
+                 }
             }
         }
     }

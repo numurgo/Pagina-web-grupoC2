@@ -1,4 +1,33 @@
 .pagina-contacto{
 
+    .contacto-info{
+        box-sizing: border-box;
+        padding: 20px;
+
+        h2{
+            font-family: $titles-font-family;
+            font-size: $font-size-h3;
+            color: $dark-blue;
+            margin-bottom: 14px;
+            text-align: center;
+        }
+
+        p {
+            font-family: $main-font-family;
+            line-height: 1.5em;
+        }
+    }
     
+    .formulario{
+        box-sizing: border-box;
+        form{
+            display: inline-block;
+            padding: 20px;
+
+            img{
+                width: 20px;
+            }
+        }
+ 
+    }
 }
