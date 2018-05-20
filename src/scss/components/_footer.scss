@@ -1,13 +1,13 @@
 
 .footer {
-    position: fixed;
+    position: block;
     bottom: 0px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     box-sizing: border-box;
-    background-color: rgb(158, 151, 151);
+    background-color: $mid-blue;
     height: 150px;
     width: 100%;
     font-family: $main-font-family;
@@ -31,6 +31,7 @@
             font-family: $main-font-family;
             font-size: $font-size-header-mobile - 2;
             color: white;
+            line-height: 1.5em;
 
             @include if-tablet-portrait {
                 font-size: $font-size-footer;
@@ -47,6 +48,13 @@
         font-size: $font-size-header-mobile;
         color: white;
 
+        h4{
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+        a{
+            color: white;
+         }
         
         @include if-tablet-portrait {
             font-size: $font-size-footer;

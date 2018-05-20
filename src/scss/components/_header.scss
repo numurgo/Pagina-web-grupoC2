@@ -1,10 +1,10 @@
 
  .header {
     width: 100%;
-    height: 60px;
+    height: 45px;
     top: 0px;
     text-align:center;
-    background-color: #0b333f;
+    background-color: $purple-blue;
     font-family: $main-font-family;
 
     display: flex;
@@ -33,7 +33,7 @@
 
         a {
             padding-right: 12px;
-            color: rgb(243, 212, 33);
+            color: $eggshell;
             font-size: $font-size-header-mobile;
 
             @include if-mobile-landscape {
