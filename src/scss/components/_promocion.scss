@@ -1,13 +1,24 @@
 .pagina-promocion{
-
-    .slides{
-        box-sizing: border-box;
+    .sliders {
         width: 100%;
-        
-
-        .img-promocion{
-            width: 100%;
-            height: 100%;
-        }     
-    }
+        margin: 0 auto;
+        margin-top: 13%;
+      }
+      
+      .full-img {
+        position: relative;
+        display: block;
+        width: 100%;
+      }
+      
+      .displayed-img {
+        width: 100%;
+      }
+      
+      .thumb-bar img {
+        display: block;
+        width: 10%;
+        float: left;
+        cursor: pointer;
+      }
 }

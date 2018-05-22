@@ -8,16 +8,21 @@
     align-items: center;
     box-sizing: border-box;
     background-color: $mid-blue;
-    height: 150px;
+    height: 170px;
     width: 100%;
     font-family: $main-font-family;
 
     .logo-footer {
+        width: 90px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
         order: 0;
+
+        @include if-tablet-portrait {
+            width: 130px;
+        }
 
         .img-logo-footer {
             width: 50px;
@@ -40,6 +45,7 @@
     }
 
     .contacto-footer {
+        width: 180px;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -58,6 +64,7 @@
         
         @include if-tablet-portrait {
             font-size: $font-size-footer;
+            width: 240px;
         }
 
         p {
@@ -66,6 +73,7 @@
     }
 
     .redes-sociales {
+        width: 30px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -73,10 +81,13 @@
         order: 2;
         padding: 0px 10px 0px 20px;
 
-        
         @include if-mobile-landscape {
-            flex-direction: row;
-            padding-left: 70px;
+            width: 70px;
+        }
+
+        @include if-tablet-portrait {
+            width: 70px;
+            font-size: $font-size-footer;
         }
 
         .icon{
