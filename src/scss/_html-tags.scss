@@ -1,8 +1,18 @@
 body {
     background: white;
     font-size: 11px;
-    color: rgb(99, 99, 99);
+    color: $text-grey;
 }
 a {
     text-decoration: none;
+}
+
+input, textarea{
+    border-radius: 5px;
+    border: 1px solid $mid-blue;
+    
+}
+
+input {
+   
 }

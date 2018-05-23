@@ -1,8 +1,13 @@
 .pagina-contacto{
 
     .contacto-info{
+        width: 100%;
         box-sizing: border-box;
         padding: 20px;
+
+        @include if-tablet-portrait {
+            padding-left: 35px;
+         }
 
         h2{
             font-family: $titles-font-family;
@@ -10,49 +15,148 @@
             color: $dark-blue;
             margin-bottom: 14px;
             text-align: center;
+
+            @include if-tablet-portrait {
+                font-size: $font-size-h1;
+                margin-bottom: 18px;
+             }
         }
 
         p {
             font-family: $main-font-family;
             line-height: 1.5em;
+
+            @include if-tablet-portrait {
+                font-size: $font-size-body;
+                line-height: 1.5em;
+             }
         }
     }
     
     .formulario{
         box-sizing: border-box;
+
+        @include if-tablet-portrait {
+            padding-left: 25px;
+         }
         form{
+            box-sizing: border-box;
             display: inline-block;
             padding: 20px;
+            width: 100%;
 
             .form-fila-1 {
                 width: 100%;
                 display: flex;
                 flex-direction: row;
 
+                @include if-tablet-landscape{
+                    flex-direction: column;
+                }
+
                 .form{
                     margin-bottom: 15px;
                     font-family: $main-font-family;
+                      }
+                }
+                
+                .name {
+                    width: 48%;
+                    margin-right: 10px;
+
+                    @include if-tablet-landscape{
+                        width: 100%;
+                    }
+                    .form-input-name{
+                        width: 95%;
+                        @include if-tablet-portrait{
+                            height: 30px;
+                        }
+                    }
                 }
 
-                .name {
-                    margin-right: 5px;
+                .gmail {
+                    width: 48%;
+                    
+                    @include if-tablet-landscape{
+                        width: 100%;
+                    }
+
+                    .form-input-mail{
+                        width: 95%;
+                        @include if-tablet-portrait{
+                            height: 30px;
+                        }
+                    }
                 }
             }
 
             .form-fila-2{
                 width: 100%;
                 font-family: $main-font-family;
+
+                @include if-tablet-portrait{
+                    margin-top: 15px;
+                }
                 textarea{
-                    width: 100%;
+                    width: 95%;
                     height: 70px;
                     margin-bottom: 15px;
+                    
+                @include if-mobile-landscape{
+                  height: 100px;
+                }
+
+                @include if-tablet-landscape{
+                    height: 140px;
+                  }
                 }
             }
 
             img{
                 width: 20px;
+                @include if-tablet-portrait{
+                    width: 30px;
+                }
+            }
+
+            
+            .input-button{
+                background-color: white;
+                color: $text-grey;
+                font-family: $main-font-family;
+                font-size: $font-size-footer;
+                padding: 5px;
+                &:focus {
+                    outline-color: $eggshell;
+                }
+                &:hover {
+                    background-color: $dark-blue;
+                    color: white;
+                }
+
+                @include if-tablet-landscape {
+                    font-size: $font-size-body;
+                }
             }
         }
  
     }
+
+
+.input-name{
+    padding-bottom: 5px;
+    padding-left: 3px;
+    @include if-tablet-portrait {
+        font-size: $font-size-footer;
+    }
+
+    @include if-tablet-landscape {
+        font-size: $font-size-body;
+    }
+    
+}
+
+.form-icon {
+    padding-left: 3px;
 }
