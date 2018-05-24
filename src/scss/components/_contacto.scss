@@ -1,3 +1,20 @@
+
+    iframe {
+        width: 100%;
+        height:250px;
+        margin-bottom: 30px;
+
+        @include if-tablet-portrait {
+            height: 350px;
+            margin-bottom: 40px;
+         }
+
+         @include if-tablet-landscape {
+            height: 400px;
+            margin-bottom: 40px;
+         }
+    }
+
 .pagina-contacto{
 
     .contacto-info{
@@ -10,10 +27,11 @@
          }
 
         h2{
-            font-family: $titles-font-family;
+            font-family: $main-font-family;
             font-size: $font-size-h3;
-            color: $dark-blue;
-            margin-bottom: 14px;
+            text-transform: uppercase;
+            color: $purple-blue;
+            margin-bottom: 20px;
             text-align: center;
 
             @include if-tablet-portrait {
@@ -25,24 +43,44 @@
         p {
             font-family: $main-font-family;
             line-height: 1.5em;
+            padding: 0px 30px 10px 20px;
+
+            @include if-mobile-landscape {
+                padding: 0px 40px 10px 30px;;
+             }
 
             @include if-tablet-portrait {
                 font-size: $font-size-body;
                 line-height: 1.5em;
+                padding: 10px 50px 10px 55px;
+             }
+
+             @include if-tablet-landscape {
+                font-size: $font-size-body;
+                line-height: 1.5em;
+                padding: 10px 70px 10px 65px;
              }
         }
     }
     
     .formulario{
         box-sizing: border-box;
+        padding: 10px 40px 20px 40px;
+
+        @include if-mobile-landscape {
+            padding: 10px 40px 20px 50px;
+         }
 
         @include if-tablet-portrait {
-            padding-left: 25px;
+            padding: 10px 60px 20px 80px;
          }
+         @include if-tablet-landscape {
+            padding: 10px 80px 20px 100px;
+         }
+
         form{
             box-sizing: border-box;
             display: inline-block;
-            padding: 20px;
             width: 100%;
 
             .form-fila-1 {
@@ -127,6 +165,7 @@
                 font-family: $main-font-family;
                 font-size: $font-size-footer;
                 padding: 5px;
+                margin-bottom: 10px;
                 &:focus {
                     outline-color: $eggshell;
                 }

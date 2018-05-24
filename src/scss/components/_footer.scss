@@ -7,10 +7,15 @@
     justify-content: space-around;
     align-items: center;
     box-sizing: border-box;
-    background-color: $mid-blue;
+    background-color: $footer-grey;
     height: 120px;
     width: 100%;
     font-family: $main-font-family;
+
+    @include if-tablet-portrait {
+        height: 150px;
+    }
+
 
     .logo-footer {
         width: 90px;
