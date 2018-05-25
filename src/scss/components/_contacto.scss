@@ -47,14 +47,12 @@
              }
 
             @include if-tablet-portrait {
-                font-size: $font-size-body;
-                line-height: 1.5em;
+                font-size: $font-size-body - 2;
                 padding: 10px 50px 10px 55px;
              }
 
              @include if-tablet-landscape {
                 font-size: $font-size-body;
-                line-height: 1.5em;
                 padding: 10px 70px 10px 65px;
              }
         }
