@@ -1,24 +1,69 @@
 .pagina-promocion{
-    .sliders {
-        width: 100%;
-        margin: 0 auto;
-        margin-top: 13%;
+
+  .slider {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+  }
+  
+  .slider ul {
+    display: flex;
+    padding: 0;
+    width: 300%;
+    animation: cambio 16s infinite alternate linear;
+  }
+  
+  .slider li {
+    width: 100%;
+    list-style: none;
+  }
+  
+  .slider img {
+    width: 100%;
+  }
+  
+  @keyframes cambio {
+    0% {margin-left: 0;}
+    20% {margin-left: 0;}
+    
+    25% {margin-left: -100%;}
+    45% {margin-left: -100%;}
+    
+    50% {margin-left: -200%;}
+    70% {margin-left: -200%;}
+    
+    75% {margin-left: -300%;}
+    100% {margin-left: -300%;}
+  }
+  
+  h1 {
+    margin: 40px 0px 10px 20px;
+    font-size: $font-size-body;
+    color: $red;
+    text-transform: uppercase;
+
+  }
+
+   .promocion-1 {
+     width: 100%;
+
+     .carteles{
+      width: 100%;
+      display: inline-block;
+
+       img {
+         width: 50%;
+         float: left;
+       }
+     }
+   }
+
+   .merchandising{
+      width: 100%;
+
+      h2{
+        margin: 15px 0px 10px 20px;
       }
-      
-      .full-img {
-        position: relative;
-        display: block;
-        width: 100%;
-      }
-      
-      .displayed-img {
-        width: 100%;
-      }
-      
-      .thumb-bar img {
-        display: block;
-        width: 10%;
-        float: left;
-        cursor: pointer;
-      }
+   }
+  
 }
