@@ -13,16 +13,16 @@
         padding: 5% 9% 5% 9%;
        }
 
+       @include if-tablet-landscape{
+        padding: 5% 12% 5% 12%;
+       }
+
        h2{
         padding-left: 30px; 
 
         @include if-mobile-landscape{
             padding-left: 10px; 
            }
-
-        @include if-tablet-portrait{
-            font-size: $font-size-h3;
-        }
        }
 
        a{
@@ -50,11 +50,17 @@
         margin-bottom: 20px;
       
         @include if-mobile-landscape{
-            padding: 10px 50px 20px 50px;
+            padding: 10px 60px 20px 60px;
            }
         
-        @include if-mobile-landscape{
+        @include if-tablet-portrait{
             padding: 10px 70px 20px 70px;
+            margin-bottom: 30px;
+           }
+
+        @include if-tablet-landscape{
+            padding: 10px 120px 20px 120px;
+            margin-bottom: 30px;
            }
 
         .horario{
@@ -68,6 +74,7 @@
 
             @include if-tablet-portrait{
                 font-size: $font-size-body;
+                margin-bottom: 60px;
             }
         }
    }
@@ -79,18 +86,34 @@
             box-sizing: border-box;
             padding: 10px 55px 10px 55px;
 
-            p{
+            .nombre, .intro{
                 padding: 7px;
             }
+        }
+
+        @include if-mobile-landscape{
+            padding: 10px 50px 20px 50px;
         }
 
         @include if-tablet-portrait{
             padding: 10px 60px 20px 60px;
 
-            p{
+            .nombre, .intro{
                 padding: 8px;
             }
+
+            .indonesia, .nepal{
+                margin-right: 10px;
+            }
         }
+
+        @include if-tablet-landscape{
+            padding: 10px 110px 20px 110px;
+
+            .indonesia, .nepal{
+                margin-right: 20px;
+            }
+         }
        
    }
    
@@ -128,6 +151,12 @@
                 margin-bottom: 10px;
 
             }
+
+            @include if-tablet-landscape{
+                font-size: $font-size-h1;
+                margin-bottom: 30px;
+
+            }
         }
         p{
             line-height: 1.6em;
@@ -135,6 +164,10 @@
             @include if-tablet-portrait {
                 font-size: $font-size-body - 2;
              }
+
+            @include if-desktop{
+                font-size: $font-size-body; 
+            }
         }
      
         img{

@@ -4,6 +4,11 @@
     width: 100%;
     margin: auto;
     overflow: hidden;
+
+    @include if-tablet-landscape{
+      width: 900px;
+      margin: 50px auto;
+    }
   }
   
   .slider ul {
@@ -42,28 +47,42 @@
     color: $red;
     text-transform: uppercase;
 
+    @include if-tablet-portrait{
+      font-size: $font-size-h3;
+      margin: 50px 0px 20px 20px;
+    }
+
   }
 
-   .promocion-1 {
-     width: 100%;
+  .promocion {
 
-     .carteles{
+    @include if-tablet-landscape{
+      width: 900px;
+      margin: 10px auto;
+    }
+
+    .promocion-1 {
       width: 100%;
-      display: inline-block;
-
-       img {
-         width: 50%;
-         float: left;
-       }
-     }
-   }
-
-   .merchandising{
-      width: 100%;
-
-      h2{
-        margin: 15px 0px 10px 20px;
+ 
+      .carteles{
+       width: 100%;
+       display: inline-block;
+ 
+        img {
+          width: 50%;
+          float: left;
+        }
       }
-   }
+    }
+ 
+    .merchandising{
+       width: 100%;
+ 
+       h2{
+         margin: 15px 0px 10px 20px;
+       }
+    }
+  }
+   
   
 }
