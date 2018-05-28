@@ -12,32 +12,98 @@
                 <div class="promocion-1">
                         <h1>Carteles Arreu 2018</h1>
                         <div class="carteles">
-                                <div class="cartel1">
-                                        <div class="texto-cartel1">Cartel ARREU 2018. <br>
+                                <div class="imagenes-cartel">
+                                        <img class="cartel" src="../img/cartel1.jpg" alt="Cartel 1">         
+                                        <img class="cartel"src="../img/cartel2.jpg" alt="Cartel 2">
+                                        <img class="cartel"src="../img/cartel3.jpg" alt="Cartel 3">   
+                                        <img class="cartel"src="../img/cartel4.jpg" alt="Cartel 4">
+                                </div>
+                                
+                                <div class="textos">
+                                        <div class="texto-cartel">Cartel ARREU 2018. <br>
                                         Indonesia sábado 7 de julio.</div>
-                                        <img src="../img/cartel1.jpg" alt="Cartel 1">
-                                </div>
-                                
-                                <div class="cartel2">
-                                        <div class="texto-cartel2">Cartel ARREU 2018. <br>
+                                        <div class="texto-cartel">Cartel ARREU 2018. <br>
                                         Japón sábado 14 de julio.</div>
-                                        <img src="../img/cartel2.jpg" alt="Cartel 2">
-                                </div>
-                                
-                                <img src="../img/cartel3.jpg" alt="Cartel 3">
-                                <img src="../img/cartel4.jpg" alt="Cartel 4">
-                        </div>       
+                                        <div class="texto-cartel">Cartel ARREU 2018. <br>
+                                        Nepal sábado 21 de julio.</div>
+                                        <div class="texto-cartel">Cartel ARREU 2018. <br>
+                                        Vietnam sábado 28 de julio.</div>
+                                </div>       
+                        </div>
+                        
                 </div>
                 <div class="merchandising">
                         <h1>Merchandising</h1>
                         <h2>Tote bags</h2>
-                        <div class="bolsas">
+                        <div class="slideshow-container">
+                                <!-- Full-width images with number and caption text -->
+                                <div class="mySlides fade">
+                                <img src="../img/slide1.jpg">
+                                </div>
+                        
+                                <div class="mySlides fade">
+                                <img src="../img/slide2.jpg">
+                                </div>
+                        
+                                <div class="mySlides fade">
+                                <img src="../img/slide3.jpg">
+                                </div>
 
+                                <div class="mySlides fade">
+                                <img src="../img/slide5.jpg">
+                                </div>
+
+                                <div class="mySlides fade">
+                                <img src="../img/slide6.jpg">
+                                </div>
+
+                                <div class="mySlides fade">
+                                <img src="../img/slide7.jpg">
+                                </div>
+                        </div>
+                        <br>
+                        
+                        <!-- The dots/circles -->
+                        <div style="text-align:center">
+                                <span class="dot" onclick="currentSlide(1)"></span>
+                                <span class="dot" onclick="currentSlide(2)"></span>
+                                <span class="dot" onclick="currentSlide(3)"></span>
                         </div>
                         <h2>Camisetas</h2>
-                        <div class="camisetas">
-
+                        <div class="slideshow-container2">
+                                <!-- Full-width images with number and caption text -->
+                                <div class="mySlides2 fade">
+                                <img src="../img/slide8.jpg">
+                                </div>
+                                
+                                <div class="mySlides2 fade">
+                                <img src="../img/slide7.jpg">
+                                </div>
+                                
+                                <div class="mySlides2 fade">
+                                <img src="../img/slide6.jpg">
+                                </div>
+        
+                                <div class="mySlides2 fade">
+                                <img src="../img/slide5.jpg">
+                                </div>
+        
+                                <div class="mySlides2 fade">
+                                <img src="../img/slide3.jpg">
+                                </div>
+        
+                                <div class="mySlides2 fade">
+                                <img src="../img/slide2.jpg">
+                                </div>
                         </div>
+                                <br>
+                                
+                                <!-- The dots/circles -->
+                                <div style="text-align:center">
+                                        <span class="dot2" onclick="currentSlide(1)"></span>
+                                        <span class="dot2" onclick="currentSlide(2)"></span>
+                                        <span class="dot2" onclick="currentSlide(3)"></span>
+                                </div>
                         <h2>Vasos</h2>
                         <div class="vasos">
 
@@ -47,3 +113,66 @@
 
 </div>
 
+
+<script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block"; 
+          slides[slideIndex].style.display = "block";
+          slides[slideIndex+1].style.display = "block";
+          slides[slideIndex+2].style.display = "block";   
+          dots[slideIndex-1].className += " active";
+        }
+
+
+        var Index2 = 1;
+         showSlides2(Index2);
+                
+        function plusSlides2(n) {
+        showSlides2(Index2 += n);
+        }
+                
+        function currentSlide2(n) {
+        showSlides2(Index2 = n);
+        }
+                
+        function showSlides2(n) {
+          var i;
+          var slides2 = document.getElementsByClassName("mySlides2");
+          var dots2 = document.getElementsByClassName("dot2");
+          if (n > slides2.length) {Index2 = 1}    
+          if (n < 1) {slideIndex2 = slides2.length}
+          for (i = 0; i < slides2.length; i++) {
+                slides2[i].style.display = "none";  
+           }
+          for (i = 0; i < dots2.length; i++) {
+                dots2[i].className = dots2[i].className.replace(" active", "");
+           }
+          slides2[Index2-1].style.display = "block"; 
+          slides2[Index2].style.display = "block";
+          slides2[Index2+1].style.display = "block";
+          slides2[Index2+2].style.display = "block";   
+          dots2[Index2-1].className += " active";
+                }
+</script>
