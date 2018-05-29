@@ -67,16 +67,17 @@
       .carteles{
        width: 100%;
        display: inline-block;
-       background-color: rgba(0, 0, 0, 0.6);
-       z-index: 0;
+       /*background-color: black;*/
+       z-index: -2;
 
           .imagenes-cartel{
             .cartel {
               width: 50%;
-              float: left;            
+              float: left; 
+              z-index: 2;           
 
             &:hover{
-              opacity: 0.25;
+              opacity: 0.35;
               -webkit-transition: opacity 300ms;
               -moz-transition: opacity 300ms;
               -o-transition: opacity 300ms;
@@ -95,6 +96,21 @@
           padding: 2px;
           box-sizing: border-box;
           top: 53%;
+
+          @include if-mobile-landscape{
+            top: 500px;
+          }
+
+          @include if-tablet-portrait{
+            top: 630px;
+          }
+
+          @include if-tablet-landscape{
+            top: 800px;
+            padding-right: 100px;
+            max-width: 1025px;
+          }
+
   
           .textos, div{
             position: relative;
@@ -108,6 +124,21 @@
             font-size: $font-size-footer;
             line-height: 1.5em;
             font-weight: bold;
+
+            @include if-mobile-landscape{
+              height: 450px;
+            }
+
+            @include if-tablet-portrait{
+              height: 520px;
+              font-size: $font-size-body;
+            }
+
+            @include if-tablet-landscape{
+              height: 600px;
+              font-size: $font-size-h3;
+              ;
+            }
 
           }
         }
