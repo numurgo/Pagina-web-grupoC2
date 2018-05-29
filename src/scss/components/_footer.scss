@@ -101,20 +101,26 @@
         }
 
         .icon{
-            width: 20px;
+            width: 15px;
             padding-top: 10px;
 
             @include if-mobile-landscape {
                 flex-direction: row;
                 padding-left: 10px;
-                width: 30px;
-                height: 35px;
+                width: 25px;
+                height: 25px;
+            }
+
+            @include if-tablet-portrait {
+                padding-left: 20px;
+                width: 37px;
+                height: 32px;
             }
 
             @include if-tablet-landscape {
                 padding-left: 20px;
-                width: 45px;
-                height: 40px;
+                width: 40px;
+                height: 35px;
             }
         }
     }

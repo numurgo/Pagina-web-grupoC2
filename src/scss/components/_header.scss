@@ -70,8 +70,8 @@
         width: 55px;
 
         @include if-mobile-landscape {
-            width: 90px;
-            padding-left: 15px;
+            width: 80px;
+            padding-right: 5px;
         }
 
         @include if-tablet-portrait {
