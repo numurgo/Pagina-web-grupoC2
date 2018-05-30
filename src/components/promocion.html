@@ -65,7 +65,7 @@
                         
                         <!-- The dots/circles -->
                         <div style="text-align:center">
-                                <span class="dot" onclick="currentSlide(1)"></span>
+                                <span class="dot" onclick="currentSlide(1,)"></span>
                                 <span class="dot" onclick="currentSlide(2)"></span>
                                 <span class="dot" onclick="currentSlide(3)"></span>
                         </div>
@@ -100,14 +100,45 @@
                                 
                                 <!-- The dots/circles -->
                                 <div style="text-align:center">
-                                        <span class="dot2" onclick="currentSlide(1)"></span>
-                                        <span class="dot2" onclick="currentSlide(2)"></span>
-                                        <span class="dot2" onclick="currentSlide(3)"></span>
+                                        <span class="dot2" onclick="currentSlide2(1)"></span>
+                                        <span class="dot2" onclick="currentSlide2(2)"></span>
+                                        <span class="dot2" onclick="currentSlide2(3)"></span>
                                 </div>
                         <h2>Vasos</h2>
-                        <div class="vasos">
-
+                        <div class="slideshow-container3">
+                                <!-- Full-width images with number and caption text -->
+                                <div class="mySlides3 fade">
+                                <img src="../img/slide5.jpg">
+                                </div>
+                                
+                                <div class="mySlides3 fade">
+                                <img src="../img/slide1.jpg">
+                                </div>
+                                
+                                <div class="mySlides3 fade">
+                                <img src="../img/slide8.jpg">
+                                </div>
+        
+                                <div class="mySlides3 fade">
+                                <img src="../img/slide7.jpg">
+                                </div>
+        
+                                <div class="mySlides3 fade">
+                                <img src="../img/slide2.jpg">
+                                </div>
+        
+                                <div class="mySlides3 fade">
+                                <img src="../img/slide3.jpg">
+                                </div>
                         </div>
+                                <br>
+                                
+                                <!-- The dots/circles -->
+                                <div style="text-align:center">
+                                        <span class="dot3" onclick="currentSlide3(1)"></span>
+                                        <span class="dot3" onclick="currentSlide3(2)"></span>
+                                        <span class="dot3" onclick="currentSlide3(3)"></span>
+                                </div>
                 </div>
         </div>
 
@@ -174,5 +205,36 @@
           slides2[Index2+1].style.display = "block";
           slides2[Index2+2].style.display = "block";   
           dots2[Index2-1].className += " active";
+                }
+
+        
+        var Index3 = 1;
+        showSlides3(Index3);
+                
+        function plusSlides3(n) {
+        showSlides3(Index3 += n);
+        }
+                
+        function currentSlide3(n) {
+        showSlides3(Index3 = n);
+        }
+                
+        function showSlides3(n) {
+          var i;
+          var slides3 = document.getElementsByClassName("mySlides3");
+          var dots3 = document.getElementsByClassName("dot3");
+          if (n > slides3.length) {Index3 = 1}    
+          if (n < 1) {slideIndex3 = slides3.length}
+          for (i = 0; i < slides3.length; i++) {
+                slides3[i].style.display = "none";  
+           }
+          for (i = 0; i < dots3.length; i++) {
+                dots3[i].className = dots3[i].className.replace(" active", "");
+           }
+          slides3[Index3-1].style.display = "block"; 
+          slides3[Index3].style.display = "block";
+          slides3[Index3+1].style.display = "block";
+          slides3[Index3+2].style.display = "block";   
+          dots3[Index3-1].className += " active";
                 }
 </script>

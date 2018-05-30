@@ -52,6 +52,10 @@
       margin: 50px 0px 20px 20px;
     }
 
+    @include if-tablet-landscape{
+      margin: 60px 0px 25px 0px;
+    }
+
   }
 
   .promocion {
@@ -147,9 +151,23 @@
  
     .merchandising{
        width: 100%;
+       margin-bottom: 10px;
+
+       @include if-tablet-portrait {
+        margin-bottom: 15px;
+       }
  
        h2{
          margin: 15px 0px 10px 20px;
+
+         @include if-tablet-portrait {
+          font-size: $font-size-body;
+          margin-bottom: 15px;
+         }
+
+         @include if-tablet-landscape {
+          margin: 15px 0px 15px 0px;
+         }
        }
     }
   }
@@ -160,14 +178,14 @@
 * {box-sizing:border-box}
 
 /* Slideshow container */
-.slideshow-container {
+.slideshow-container, .slideshow-container2, .slideshow-container3 {
   max-width: 1100px;
   position: relative;
   margin: auto;
 }
 
 /* Hide the images by default */
-.mySlides {
+.mySlides, .mySlides2, .mySlides3 {
     display: none;
 
     img {
@@ -178,18 +196,34 @@
 }
 
 /* The dots/bullets/indicators */
-.dot {
+.dot, .dot2, .dot3 {
   cursor: pointer;
-  height: 10px;
-  width: 10px;
-  margin: 2px 2px 10px 0px;
+  height: 7px;
+  width: 7px;
+  margin: 5px 2px 10px 0px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
+
+  @include if-mobile-landscape{
+    margin: 7px 4px 15px 2px;
+    height: 8px;
+    width: 8px;
+  }
+
+  @include if-tablet-portrait{
+    margin: 10px 5px 20px 5px;
+    height: 10px;
+    width: 10px;
+  }
+
+  @include if-tablet-portrait{
+    margin: 12px 7px 30px 5px;
+  }
 }
 
-.active, .dot:hover {
+.active, .dot:hover, .dot2:hover, .dot3:hover {
   background-color: #717171;
 }
 
@@ -209,38 +243,4 @@
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
-}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1100px;
-  position: relative;
-  margin: auto;
-}
-
-/* Hide the images by default */
-.mySlides2 {
-    display: none;
-
-    img {
-      width: 25%;
-      float: left;
-      margin-bottom: 5px;
-    }
-}
-
-/* The dots/bullets/indicators */
-.dot2 {
-  cursor: pointer;
-  height: 10px;
-  width: 10px;
-  margin: 2px 2px 10px 0px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot2:hover {
-  background-color: #717171;
 }
