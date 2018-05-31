@@ -82,45 +82,39 @@
         }
     }
 
-    .redes-sociales {
-        width: 30px;
+    .ajuntament {
+        width: 60px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
         order: 2;
-        padding: 0px 10px 0px 20px;
+        padding: 0px 20px 10px 10px;
 
         @include if-mobile-landscape {
             width: 70px;
+            padding: 0px 20px 20px 10px;
         }
 
         @include if-tablet-portrait {
-            width: 70px;
+            width: 80px;
             font-size: $font-size-footer;
         }
 
-        .icon{
-            width: 15px;
+        .a_logo{
+            width: 45px;
             padding-top: 10px;
 
             @include if-mobile-landscape {
-                flex-direction: row;
-                padding-left: 10px;
-                width: 25px;
-                height: 25px;
+                width: 55px;
             }
 
             @include if-tablet-portrait {
-                padding-left: 20px;
-                width: 37px;
-                height: 32px;
+                width: 70px;
             }
 
             @include if-tablet-landscape {
-                padding-left: 20px;
-                width: 40px;
-                height: 35px;
+                width: 85px;
             }
         }
     }

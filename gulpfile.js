@@ -17,7 +17,7 @@ var autoprefixer = require("autoprefixer");
 var cssnano = require("cssnano");
 
 
-gulp.task("default", ["img", "vid", "html", "sass", "js"], function(){
+gulp.task("default", ["img", "vid", "html", "php", "sass", "js"], function(){
     browserSync.init({ server: "dist/" });
     gulp.watch(["src/scss/*.scss", "src/scss/**/*.scss"], ["sass"]);
     gulp.watch(["src/*.html", "src/**/*.html"], ["html"]);
@@ -47,6 +47,14 @@ gulp.task("html", function(){
         .pipe(gulp.dest("dist/"))
         .pipe(browserSync.stream())
         //.pipe(notify("HTML importado"));
+});
+
+gulp.task("php", function(){
+    gulp.src("src/components/enviar.php")
+        .pipe(gulpImport("src/components/"))
+        .pipe(gulp.dest("dist/"))
+        .pipe(browserSync.stream())
+      
 });
 
 
