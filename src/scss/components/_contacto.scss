@@ -1,22 +1,25 @@
+/*Hoja de estilo para la página de contacto. Contenido anidado.*/ 
 
-    iframe {
-        width: 100%;
-        height:250px;
-        margin-bottom: 30px;
+/* Ajustes para la ventana que contiene el mapa. No se coloca anidado porque se encuentra fuera del div
+general de la página */
+iframe {
+    width: 100%;
+    height:250px;
+    margin-bottom: 30px;
 
-        @include if-tablet-portrait {
-            height: 350px;
-            margin-bottom: 40px;
-         }
-
-         @include if-tablet-landscape {
-            height: 400px;
-            margin-bottom: 40px;
-         }
+    @include if-tablet-portrait {
+        height: 350px;
+        margin-bottom: 40px;
     }
 
-.pagina-contacto{
+    @include if-tablet-landscape {
+        height: 400px;
+    }
+}
 
+
+.pagina-contacto{
+    /* Ajustes para el div con la información sobre nosotras */
     .contacto-info{
         width: 100%;
         box-sizing: border-box;
@@ -26,6 +29,7 @@
             padding-left: 35px;
          }
 
+        /* Título "Contacta con nosotras" */
         h2{
             font-size: $font-size-h3;
             color: $red;
@@ -38,6 +42,7 @@
              }
         }
 
+        /* Párrafo de contacto */
         p {
             line-height: 1.5em;
             padding: 0px 30px 10px 20px;
@@ -58,6 +63,7 @@
         }
     }
     
+    /* Ajustes para el div general que engloba todo el formulario*/
     .formulario{
         box-sizing: border-box;
         padding: 10px 40px 20px 40px;
@@ -73,11 +79,15 @@
             padding: 10px 80px 20px 100px;
          }
 
+
+        /* Ajustes del formulario */
         form{
             box-sizing: border-box;
             display: inline-block;
             width: 100%;
             
+            /* Clase para la fila uno de forma que en los formatos pequeños el nombre y el gmail estén en
+            líneas separadas mientras que en los formatos grandes ocupen una sola línea */
             .form-fila-1 {
                 width: 100%;
                 display: flex;
@@ -87,12 +97,14 @@
                     flex-direction: row;
                 }
 
+                /* Clasec común para los divs que engloban los campos del nombre y del gmail*/
                 .form{
                     margin-bottom: 15px;
                     font-family: $main-font-family;
                       }
                 }
                 
+                /* Ajustes para el campo del nombre (imagen e input)*/
                 .name {
                     width: 100%;
                     margin-right: 5px;
@@ -108,6 +120,7 @@
                     }
                 }
 
+                 /* Ajustes para el campo del correo (imagen e input)*/
                 .gmail {
                     width: 100%;
                     
@@ -124,6 +137,7 @@
                 }
             }
 
+            /* Clase para la fila 2 del formulario, en la que solo se encuentra la zona de texto. */
             .form-fila-2{
                 width: 100%;
                 font-family: $main-font-family;
@@ -146,6 +160,9 @@
                 }
             }
 
+            /* Ajustes para las imágenes que acompañan a los tres inputs. Se coloca dentro de form pero 
+            de forma más general (no dentro de ningún div concreto) porque los ajustes son iguales para las
+            tres imágenes de los tres campos. */
             img{
                 width: 20px;
                 @include if-tablet-portrait{
@@ -153,7 +170,7 @@
                 }
             }
 
-            
+            /* Botón de enviar el formulario*/
             .input-button{
                 background-color: white;
                 color: $text-grey;
@@ -161,9 +178,11 @@
                 font-size: $font-size-footer;
                 padding: 5px;
                 margin-bottom: 10px;
+                //Cambia de color cuando se pulsa
                 &:focus {
                     outline-color: $eggshell;
                 }
+                //Cambia también cuando se pasa por encima
                 &:hover {
                     background-color: $dark-blue;
                     color: white;
@@ -177,20 +196,20 @@
  
     }
 
-
-.input-name{
-    padding-bottom: 5px;
-    padding-left: 3px;
-    @include if-tablet-portrait {
-        font-size: $font-size-footer;
-    }
-
-    @include if-tablet-landscape {
-        font-size: $font-size-body;
-    }
+    /* Ajustes del texto "Tu mensjae" sobre la textaera */
+    .input-name{
+        padding-bottom: 5px;
+        padding-left: 3px;
+        @include if-tablet-portrait {
+            font-size: $font-size-footer;
+        }
     
-}
-
-.form-icon {
-    padding-left: 3px;
-}
+        @include if-tablet-landscape {
+            font-size: $font-size-body;
+        }
+        
+    }
+    /* Icono de mensaje para el tercer input*/
+    .form-icon {
+        padding-left: 3px;
+    }

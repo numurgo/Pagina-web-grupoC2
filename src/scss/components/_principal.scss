@@ -1,17 +1,22 @@
+/*Hoja de estilo para la página principal. Contenido anidado.*/ 
+
 .pagina-principal{
 
+    /* Ajustes para el vídeo. Se coloca dentro de la clase .pagina-principal para que la clase bloques no se coloque por debajo
+    y modifique su posición*/
     .video{
         box-sizing: border-box;
         width: 100%;
         height: 300px;
-        margin-bottom: 20px;
-           
+        margin-bottom: 20px;     
     }
 
+    /* Clase que agrupa los textos e imágens de la página principal */
     .bloques {
         margin-top: 10px;
         box-sizing: border-box;
         
+        /* Ajustes para los bloques de texto*/
         .texto-principal {
             margin-bottom: 10px;
             
@@ -21,6 +26,7 @@
             margin: 20px 0px 40px 20px;
         }
 
+            /* Títulos de cada apartado de texto con sus respectivas media queries */
             h2 {
                 font-size: $font-size-body;
                 color: $red;
@@ -40,6 +46,7 @@
                  }
             }
 
+            /* Párrafo explicativo de cada apartado con sus media queries*/
             p {
                 line-height: 1.6em;
                 margin-bottom: 10px;
@@ -59,8 +66,9 @@
             }           
         }
 
+        /* Ajustes para las imágenes  que acompañan los textos*/
        .img-principal{
-       
+            /* En mobile-portrait solo aparece una imagen*/
             img {
                 width: 100%;
                 margin-bottom: 30px;
@@ -71,6 +79,8 @@
                     float: left;
                 }
             }
+            /* En cambio a partir de mobile-landscape se colocan dos imágenes en fila, por lo que cada una 
+            debe ocupar el 50% del width. */
             .img-hide{
                 display: none;
 

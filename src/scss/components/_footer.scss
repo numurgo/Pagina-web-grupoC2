@@ -1,5 +1,8 @@
+/*Hoja de estilo para el footer. Contenido anidado*/ 
 
-
+/*El footer se coloca al final de todas las páginas, en color gris, ocupando todo el ancho de página y con 120'px iniciales.
+Además también se utiliza flexbox para una mejor organización. Se incluye una media query para hacerlo más alto cuando se 
+visualice en una tablet */
 .footer {
     position: block;
     bottom: 0px;
@@ -18,6 +21,8 @@
     }
 
 
+    /*Ajustes para el logo de Arreu con sus respectivas media queries. Incluye el logo en sí y el texto de copyrgight,
+    por lo que se coloca en forma de columna para que aparezcan un elemento encima de otro. */
     .logo-footer {
         width: 90px;
         display: flex;
@@ -30,6 +35,7 @@
             width: 130px;
         }
 
+        /* Imagen en png del logo con sus ajustes de tamaño pertinentes*/
         .img-logo-footer {
             width: 70px;
             padding-bottom: 10px;
@@ -42,6 +48,7 @@
                 width: 130px;
             }
         }
+        /* Texto de copyright*/
         .copyright {
             font-family: $main-font-family;
             font-size: $font-size-header-mobile - 4;
@@ -54,6 +61,7 @@
         }
     }
 
+    /* Columna con la información de contacto, por lo que se organiza también con flex-box*/
     .contacto-footer {
         width: 180px;
         display: flex;
@@ -64,13 +72,11 @@
         font-size: $font-size-header-mobile;
         color: white;
 
+        /* Título "información de contacto" */
         h4{
             text-transform: uppercase;
             margin-bottom: 15px;
         }
-        a{
-            color: white;
-         }
         
         @include if-tablet-portrait {
             font-size: $font-size-footer;
@@ -82,11 +88,10 @@
         }
     }
 
+    /* Ajustes para el div del logo del ayuntamiento con meida queries*/
     .ajuntament {
         width: 60px;
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
         align-items: center;
         order: 2;
         padding: 0px 20px 10px 10px;
@@ -101,6 +106,7 @@
             font-size: $font-size-footer;
         }
 
+        /* Ajustes para la imagen en png del logo y sus adaptaciones de tamaño correspondientes*/
         .a_logo{
             width: 45px;
             padding-top: 10px;

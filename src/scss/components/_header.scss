@@ -1,3 +1,8 @@
+/*Hoja de estilo para el header. Contenido anidado*/ 
+
+/* Ajustes generales del header para que tenga una altura inicial de 45px, fondo rojo, está arriba y alineado al centro 
+y utilize la fuente principal. Además utilizamos flexbox para distrbuír los elementos de forma más fácil y que estén centrados
+y cada uno a un extremo*/
 .header {
     width: 100%;
     height: 45px;
@@ -13,6 +18,7 @@
     box-sizing: border-box;
     padding: 0px 2px 0px 10px;
 
+    /*Media queries para variar el padding y la altura del header según el tamaño de visualización*/
     @include if-mobile-landscape {
         padding: 0px 10px 0px 18px;
         height: 55px;
@@ -27,6 +33,7 @@
         padding: 0px 22px 0px 22px;
     }
 
+    /*Para los links también utilizamos felxbox, de modo que se coloquen en línea y tengan orden 1 porque van después del logo */
     .header-links {
         display: flex;
         align-items: center;
@@ -35,11 +42,13 @@
         box-sizing: border-box;
         order: 1;
 
+        /*Ajustes para los enclaces a las diferentes subpáginas */
         a {
             padding-right: 12px;
             color: white;
             font-size: $font-size-header-mobile;
 
+            /*Meida queries para ajustar el tamaño y el padding de los links*/
             @include if-mobile-landscape {
                 font-size: $font-size-header - 6;
                 padding-right: 25px;
@@ -57,18 +66,15 @@
         }
     }
     
+    /*Disposición y tamaño del logo */
     .logo {
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        justify-content: center;
-        box-sizing: border-box;
         order: 0;
         padding-left: 10px;
                     
        .logo-img {
         width: 55px;
 
+        /* Media queries*/
         @include if-mobile-landscape {
             width: 80px;
             padding-right: 5px;

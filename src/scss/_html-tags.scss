@@ -1,3 +1,6 @@
+/*Etiquetas html con estilo común para todas las páginas. De este modo no repetimos código en cada una de 
+las páginas y hay un fácil acceso a estos elementos*/
+
 body {
     background: white;
     font-size: $font-size-body-mobile;
@@ -16,8 +19,4 @@ input, textarea{
 
 h2{
     text-transform: uppercase;
-}
-
-input {
-   
 }

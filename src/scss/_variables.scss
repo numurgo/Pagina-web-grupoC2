@@ -1,6 +1,7 @@
-// Font families
+/* Variables generales para toda la página*/
+
+// Fuentes
 $main-font-family: 'Montserrat';
-$titles-font-family: 'Kalam';
 
 // Font sizes
 $font-size-header: 16px;
@@ -13,7 +14,7 @@ $font-size-h2: 20px;
 $font-size-h1: 24px;
 
 
-//Colors
+//Colores
 $red: rgb(203,4,37);
 $eggshell: rgb(216,184,187);
 $purple-blue: rgb(24,23,37);
@@ -30,6 +31,4 @@ $mobile-portrait-width: 414px;
 $mobile-landscape-width: 767px;
 $tablet-portrait-width: $mobile-landscape-width + 1;
 $tablet-landscape-width: 1024px;
-
-// Forms variables
 

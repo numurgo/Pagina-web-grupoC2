@@ -1,3 +1,7 @@
+/* Clase utilizada en todas las páginas para evitar que el contenido html aumente de 1100px aunque el tamañ
+de la pantalla de visualización sea mayor a este. De modo que elcontenido quede alineado al centre con márgenes 
+crecientes a ambos lados. */
+
 .container {
     max-width: 1100px;
     margin: 0px auto;

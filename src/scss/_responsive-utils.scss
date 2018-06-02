@@ -1,3 +1,5 @@
+/*Media queries para ajustar el diseño de la página según el dispositivo en el que se visualice. */
+
 @mixin if-mobile-portrait {
     // hasta 414 
     @media (max-width: #{$mobile-portrait-width}) {

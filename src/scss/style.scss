@@ -1,16 +1,14 @@
+/* Hoja de estilo principal. en ella se importan todas las demás hojas creadas, primero las más generales
+y después las que se corresponden con los documentos htm de components y que por tanto se guardan en otra
+carpeta llamada del mismo modo pero dentro del apartado scss.*/
+
 @import "reset";
 @import "variables";
 @import "html-tags";
 @import "responsive-utils";
 
+/* Importanción de la fuente Montserrat, que será la fuente utilizada en toda la página web*/
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
-@font-face {
-    font-family: 'FontAwesome';
-    src: url('../fonts/FontAwesome.otf');
-}
-
-@import url('https://fonts.googleapis.com/css?family=Courgette|Kalam|Lobster');
-
 
 @import "components/header";
 @import "components/footer";
