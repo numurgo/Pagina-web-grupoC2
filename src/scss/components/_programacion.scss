@@ -79,7 +79,7 @@
         }
    }
 
-   .columna-1{
+   .fila-1{
         @include if-mobile-landscape{
             width: 100%;
             display: flex;

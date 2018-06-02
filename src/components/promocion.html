@@ -1,5 +1,10 @@
+<!--Html para el contenido principal de la página promocional del evento-->
 
+<!--Div general con la clase container, pues cuando llegue a cierto tamaño,
+los elementos inlcuídos no deben aumentar más su tamaño.-->
 <div class="pagina-promocion container">
+
+        <!--Div para el slider superior-->
        <div class="slider fade">
 		<ul>
                         <li><img src="../img/img1.jpg" alt=""></li>
@@ -8,17 +13,21 @@
 		</ul>
         </div>
         
+        <!--Div que engloba todos los elementos promocionales-->
         <div class="promocion">
+                <!--Div para la primera parte de la promoción, es decir, los carteles-->
                 <div class="promocion-1">
                         <h1>Carteles Arreu 2018</h1>
+                        <!--Div para los carteles, que incluye imágenes y un texto por debajo-->
                         <div class="carteles">
+                                <!--Imágenes de los carteles-->
                                 <div class="imagenes-cartel">
                                         <img class="cartel" src="../img/cartel1.jpg" alt="Cartel 1">         
                                         <img class="cartel"src="../img/cartel2.jpg" alt="Cartel 2">
                                         <img class="cartel"src="../img/cartel3.jpg" alt="Cartel 3">   
                                         <img class="cartel"src="../img/cartel4.jpg" alt="Cartel 4">
                                 </div>
-                                
+                                <!--Texto que indica qué cartel es cada uno-->
                                 <div class="textos">
                                         <div class="texto-cartel">Cartel ARREU 2018. <br>
                                         Indonesia sábado 7 de julio.</div>
@@ -32,11 +41,14 @@
                         </div>
                         
                 </div>
+                <!--Div para la segunda parte de la promoción, es decir, el merchandising-->
                 <div class="merchandising">
+                        <!--Títulos-->
                         <h1>Merchandising</h1>
                         <h2>Tote bags</h2>
+                        <!--Div que contiene todas las imágenes del primer slider-->
                         <div class="slideshow-container">
-                                <!-- Full-width images with number and caption text -->
+                                <!--Cada imagen individual está contenida en su propio div-->
                                 <div class="mySlides fade">
                                 <img src="../img/slide1.jpg">
                                 </div>
@@ -63,15 +75,18 @@
                         </div>
                         <br>
                         
-                        <!-- The dots/circles -->
-                        <div style="text-align:center">
+                        <!--Puntos para pasar las imágenes -->
+                        <div class="dot-container">
+                                <!--Se pasa la imagen al pulsar sobre ellos-->
                                 <span class="dot" onclick="currentSlide(1)"></span>
                                 <span class="dot" onclick="currentSlide(2)"></span>
                                 <span class="dot" onclick="currentSlide(3)"></span>
                         </div>
+
+                        <!--Nuevo slider con su título. Misma estructura -->
                         <h2>Camisetas</h2>
                         <div class="slideshow-container2">
-                                <!-- Full-width images with number and caption text -->
+                                <!--Cada imagen individual está contenida en su propio div-->
                                 <div class="mySlides2 fade">
                                 <img src="../img/slide8.jpg">
                                 </div>
@@ -98,15 +113,18 @@
                         </div>
                                 <br>
                                 
-                                <!-- The dots/circles -->
-                                <div style="text-align:center">
+                                <!--Puntos para pasar las imágenes -->
+                                <div class="dot-container">
+                                        <!--Se pasa la imagen al pulsar sobre ellos-->
                                         <span class="dot2" onclick="currentSlide2(1)"></span>
                                         <span class="dot2" onclick="currentSlide2(2)"></span>
                                         <span class="dot2" onclick="currentSlide2(3)"></span>
                                 </div>
+
+                        <!--Slider número 3 con su título. Misma estructura -->
                         <h2>Vasos</h2>
                         <div class="slideshow-container3">
-                                <!-- Full-width images with number and caption text -->
+                                <!--Cada imagen individual está contenida en su propio div-->
                                 <div class="mySlides3 fade">
                                 <img src="../img/slide5.jpg">
                                 </div>
@@ -133,8 +151,9 @@
                         </div>
                                 <br>
                                 
-                                <!-- The dots/circles -->
-                                <div style="text-align:center">
+                                 <!--Puntos para pasar las imágenes -->
+                                <div class="dot-container">
+                                        <!--Se pasa la imagen al pulsar sobre ellos-->
                                         <span class="dot3" onclick="currentSlide3(1)"></span>
                                         <span class="dot3" onclick="currentSlide3(2)"></span>
                                         <span class="dot3" onclick="currentSlide3(3)"></span>
@@ -145,39 +164,54 @@
 </div>
 
 
-
+<!--Código JavaScript para esta página pues solo se utiliza en ella-->
 <script>
+        /* Variable para controlar las imágenes que se mostrarán junto con la función de la línea inferior*/
         var slideIndex = 1;
         showSlides(slideIndex);
         
+        /* Función para pasar las imágenes*/
         function plusSlides(n) {
           showSlides(slideIndex += n);
         }
         
+        /* Función para la imagen actual. Esta función se emplea en la clase dots para pasar la imagen con un click*/
         function currentSlide(n) {
           showSlides(slideIndex = n);
         }
         
+        /* Función principal de control del slider*/
         function showSlides(n) {
-          var i;
+          var i;    
+          /* Variables que se unen a las clases de html*/      
           var slides = document.getElementsByClassName("mySlides");
           var dots = document.getElementsByClassName("dot");
-          if (n > slides.length) {slideIndex = 1}    
+          /* Condicional según el cual si el número n es mayor a la longitud de las imágenes, slideIndex= 1
+          de modo que nunca se pueda superar el número de imágenes*/
+          if (n > slides.length) {slideIndex = 1}   
+           /* Condicional contrario al anterior según el cual no se pueda bajat unca de 1*/ 
           if (n < 1) {slideIndex = slides.length}
+          /* Bucle que utiliza la variable i creada anteriormente para que las imágenes empiezen todas en
+          display none, es decir, que no se visualicen */
           for (i = 0; i < slides.length; i++) {
               slides[i].style.display = "none";  
           }
+          /* Bucle para activar los puntos sobre los que clickar para pasar las imágenes*/
           for (i = 0; i < dots.length; i++) {
               dots[i].className = dots[i].className.replace(" active", "");
           }
+          /* Se muestra la imagen que determine slideIndex, pero también la anterior y las dos siguientes,
+          ya que se cambia display a block */ 
           slides[slideIndex-1].style.display = "block"; 
           slides[slideIndex].style.display = "block";
           slides[slideIndex+1].style.display = "block";
-          slides[slideIndex+2].style.display = "block";   
+          slides[slideIndex+2].style.display = "block"; 
+          /*Se activan los puntos, que funcionan como botones*/  
           dots[slideIndex-1].className += " active";
         }
 
 
+        /*Exactamente misma estructura que el bloque anterior pero cambiando el nombre las variables*/ 
         var Index2 = 1;
          showSlides2(Index2);
                 
@@ -209,6 +243,7 @@
                 }
 
         
+        /*Exactamente misma estructura que el primer bloque pero cambiando el nombre las variables*/ 
         var Index3 = 1;
         showSlides3(Index3);
                 
