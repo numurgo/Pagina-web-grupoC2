@@ -78,10 +78,15 @@
             .cartel {
               width: 50%;
               float: left; 
-              z-index: 2;           
+              z-index: 2;
+              padding: 2px;
+              
+              @include if-tablet-portrait{
+                padding: 4px;
+              }
 
             &:hover{
-              opacity: 0.35;
+              opacity: 0.25;
               -webkit-transition: opacity 300ms;
               -moz-transition: opacity 300ms;
               -o-transition: opacity 300ms;
@@ -110,7 +115,7 @@
           }
 
           @include if-tablet-landscape{
-            top: 800px;
+            top: 820px;
             padding-right: 100px;
             max-width: 1025px;
           }
@@ -135,12 +140,12 @@
 
             @include if-tablet-portrait{
               height: 520px;
-              font-size: $font-size-body;
+              font-size: $font-size-header;
             }
 
             @include if-tablet-landscape{
               height: 600px;
-              font-size: $font-size-h3;
+              font-size: $font-size-h2;
               ;
             }
 
@@ -158,7 +163,7 @@
        }
  
        h2{
-         margin: 15px 0px 15px 20px;
+         margin: 15px 0px 10px 20px;
 
          @include if-tablet-portrait {
           font-size: $font-size-body;
@@ -169,6 +174,24 @@
           margin: 15px 0px 25px 0px;
          }
        }
+
+       .marcapaginas{
+         display: inline;
+
+            img{
+              width: 32.6%;
+              padding: 1px;
+              margin-bottom: 25px;
+
+              @include if-tablet-portrait{
+                margin-bottom: 40px;
+              }
+
+              @include if-desktop{
+                margin-bottom: 60px;
+              }
+            }
+       }
     }
   }
    
@@ -178,20 +201,32 @@
 * {box-sizing:border-box}
 
 /* Slideshow container */
-.slideshow-container, .slideshow-container2, .slideshow-container3 {
+.slideshow-container, .slideshow-container2{
   max-width: 1100px;
   position: relative;
   margin: auto;
 }
 
 /* Hide the images by default */
-.mySlides, .mySlides2, .mySlides3 {
+.mySlides, .mySlides2{
     display: none;
 
     img {
       width: 25%;
       float: left;
       margin-bottom: 5px;
+
+      @include if-mobile-landscape{
+        margin-bottom: 10px;
+      }
+
+      @include if-tablet-portrait{
+        margin-bottom: 15px;
+      }
+
+      @include if-tablet-landscape{
+        margin-bottom:20px;
+      }
     }
 }
 
@@ -200,11 +235,11 @@
 }
 
 /* The dots/bullets/indicators */
-.dot, .dot2, .dot3 {
+.dot, .dot2 {
   cursor: pointer;
   height: 7px;
   width: 7px;
-  margin: 10px 2px 10px 0px;
+  margin: 8px 2px 15px 0px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
@@ -217,7 +252,7 @@
   }
 
   @include if-tablet-portrait{
-    margin: 10px 5px 20px 5px;
+    margin: 10px 5px 40px 5px;
     height: 10px;
     width: 10px;
   }
@@ -227,7 +262,7 @@
   }
 }
 
-.active, .dot:hover, .dot2:hover, .dot3:hover {
+.active, .dot:hover, .dot2:hover{
   background-color: #717171;
 }
 
