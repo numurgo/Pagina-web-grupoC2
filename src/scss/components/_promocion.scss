@@ -1,32 +1,41 @@
+/*Hoja de estilo para la página de promoción. Contenido anidado.*/ 
+
 .pagina-promocion{
 
+  //Div con las imágenes para el slider
   .slider {
     width: 100%;
     margin: auto;
     overflow: hidden;
-
+    //Cuando llegue a 900px ya no aumentará más y dejará de estar pegado al header
     @include if-tablet-landscape{
       width: 900px;
       margin: 50px auto;
     }
   }
   
+  /*Lista que contiene las imágenes. Estas imágenes pasan de forma automática mediante una animación*/
   .slider ul {
     display: flex;
     padding: 0;
-    width: 300%;
+    width: 400%;
     animation: cambio 16s infinite alternate linear;
+    // nombre/tiempo/ciclo infinito/hacia delante y hacia atrás/de forma lineal
   }
   
+  /*Elementos particulares de la lista de imágenes*/
   .slider li {
     width: 100%;
     list-style: none;
   }
   
+  //Cada imagen ocupa el 100%.
   .slider img {
     width: 100%;
   }
   
+  /* Animación que dirige el cambio del slider. Como hay cuatro imágenes, se divide en cuatro y se va desplazando
+     la fila que contiene las imágenes de forma que s emuestren una a una*/
   @keyframes cambio {
     0% {margin-left: 0;}
     20% {margin-left: 0;}
@@ -41,6 +50,7 @@
     100% {margin-left: -300%;}
   }
   
+  /* Ajustes para todos los títulos h1 de la págna de promoción*/
   h1 {
     margin: 40px 0px 10px 20px;
     font-size: $font-size-body;
@@ -58,23 +68,27 @@
 
   }
 
+  //Div que engloba toda la promoción creada por nosotras
   .promocion {
-
+    //No aumentará más de 900px
     @include if-tablet-landscape{
       width: 900px;
       margin: 10px auto;
     }
 
+    //Div que contiene toda la información sobre los carteles y su título
     .promocion-1 {
       width: 100%;
  
+      //Div que engloba las imágenes y los textos subyacentes
       .carteles{
        width: 100%;
        display: inline-block;
-       /*background-color: black; */
        z-index: -2;
 
+          //Div que engloba todas las imágenes
           .imagenes-cartel{
+            //Clase para los carteles de forma individual. Se colocan dos por fila
             .cartel {
               width: 50%;
               float: left; 
@@ -85,6 +99,7 @@
                 padding: 4px;
               }
 
+            //Si se pasa por encima de las imágenes estas reducen su opacidad, dejando ver los textos situados en un nivel inferior
             &:hover{
               opacity: 0.25;
               -webkit-transition: opacity 300ms;
@@ -96,6 +111,7 @@
           }
         }
           
+        /* Div que engloba todos los textos debajo de las imágenes. Por ello se organizan de la misma forma que los carteles*/
         .textos{
           width: 100%;
           height: 75%;
@@ -120,7 +136,8 @@
             max-width: 1025px;
           }
 
-  
+          /* Ajustes específicos de cada div dentro de la clase textos y media queries para ajustarlos a los
+            diferentes tamaños de visualización. */
           .textos, div{
             position: relative;
             width: 50%;
@@ -154,6 +171,7 @@
       }
     }
  
+    // Div para todo el merchandising ofrecido durante el evento
     .merchandising{
        width: 100%;
        margin-bottom: 10px;
@@ -162,6 +180,7 @@
         margin-bottom: 15px;
        }
  
+       //Ajustes para todos los títulos h2 dentro de la clase
        h2{
          margin: 15px 0px 10px 20px;
 
@@ -175,9 +194,10 @@
          }
        }
 
+       //Div con las imágenes de marcapáginas. Fila fija con imágenes que aumentan con el tamaño de la pantalla
        .marcapaginas{
          display: inline;
-
+            //Ajustes para las imágenes dentro de este div
             img{
               width: 32.6%;
               padding: 1px;
@@ -198,6 +218,8 @@
   
 }
 
+/* Ajustes para los sliders. En este caso se necesita interacción del usuario para hacerlos funcionar,
+por lo que también se utiliza código JavaScript.*/
 * {box-sizing:border-box}
 
 /* Slideshow container */
@@ -207,10 +229,12 @@
   margin: auto;
 }
 
-/* Hide the images by default */
+/* Divs que contienen las imágenes. Se ocultan por defecto. El código JavaScript se encarga de
+  hacerlas aparecer en la pantalla */
 .mySlides, .mySlides2{
     display: none;
 
+    /* Ajustes para las imágenes. Se ven cuatro de una vez*/
     img {
       width: 25%;
       float: left;
@@ -230,11 +254,12 @@
     }
 }
 
+//Div que contiene los puntos para pasar las imágenes
 .dot-container{
   text-align: center;
 }
 
-/* The dots/bullets/indicators */
+/* Ajustes para los puntos, que aumentan de tamaño con la pantalla*/
 .dot, .dot2 {
   cursor: pointer;
   height: 7px;
@@ -262,11 +287,12 @@
   }
 }
 
+//Efecto de oscurecimiento al activar los puntos o pasar sobre ellos
 .active, .dot:hover, .dot2:hover{
   background-color: #717171;
 }
 
-/* Fading animation */
+/* Animación para el paso de los sliders */
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;

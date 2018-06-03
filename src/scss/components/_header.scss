@@ -47,6 +47,11 @@ y cada uno a un extremo*/
             padding-right: 12px;
             color: white;
             font-size: $font-size-header-mobile;
+            transition: color 0.2s ease;
+
+            &:hover{
+                color: $purple-blue;
+            }
 
             /*Meida queries para ajustar el tamaño y el padding de los links*/
             @include if-mobile-landscape {
@@ -73,21 +78,42 @@ y cada uno a un extremo*/
                     
        .logo-img {
         width: 55px;
+        transition: width 0.2s ease;
+
+        &:hover{
+            width: 70px;
+            transition: width 0.2s ease;
+        }
 
         /* Media queries*/
         @include if-mobile-landscape {
             width: 80px;
             padding-right: 5px;
+
+            &:hover{
+                width: 90px;
+                transition: width 0.2s ease;
+            }
         }
 
         @include if-tablet-portrait {
             width: 100px;
             padding-left: 15px;
+
+            &:hover{
+                width: 130px;
+                transition: width 0.2s ease;
+            }
         }
 
         @include if-tablet-landscape {
             width: 130px;
             padding-left: 15px;
+
+            &:hover{
+                width: 160px;
+                transition: width 0.2s ease;
+            }
         }
         
        }

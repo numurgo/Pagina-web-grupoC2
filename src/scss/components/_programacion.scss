@@ -1,7 +1,7 @@
 /*Hoja de estilo para la página de programación. Contenido anidado.*/ 
 
 .pagina-programacion{
-    
+    /* Div para el emplazamiento en el que tendrá lugar el evento*/
    .lugar{
        width: 100%;
        box-sizing: border-box;
@@ -19,6 +19,8 @@
         padding: 5% 12% 5% 12%;
        }
 
+       // Título "Emplazamiento"
+       /*Ajustes específicos sobre la posición de este título*/
        h2{
         padding-left: 30px; 
 
@@ -27,6 +29,7 @@
            }
        }
 
+       //Enlace a la plaza Viriato en google maps
        a{
            color: $text-grey;
            padding-left: 30px;
@@ -40,6 +43,7 @@
          }
        }
 
+       //Ajustes de la imagen de la zona (de generación propia)
        img{
            padding: 10px 22px 10px 22px;
 
@@ -51,6 +55,7 @@
        }
    }
 
+   /* Div que engloba tanto el horario como las actividades a realizar con sus media queries*/
    .programacion{
         width: 100%;
         box-sizing: border-box;
@@ -71,6 +76,7 @@
             margin-bottom: 30px;
            }
 
+        //Div para el apartado de horario
         .horario{
             text-transform: uppercase;
             font-size: $font-size-body-mobile + 2;
@@ -87,20 +93,23 @@
         }
    }
 
+   /* Div que agrupa las culturas en dos filas. Misma clase para las dos filas*/
    .fila-1{
+       /* Se inicia ya con una media querie porque en mobile-portrait no necesia ningún ajuste.*/
         @include if-mobile-landscape{
             width: 100%;
             display: flex;
             box-sizing: border-box;
             padding: 10px 55px 10px 40px;
 
+            //Clases para el nombre original de los títeres y la información sobre ellos
             .nombre, .intro{
                 padding-right: 20px;
                 padding-bottom: 5px;
             }
         }
 
-
+        //Ajustes para el tamaño de tablet-portrait
         @include if-tablet-portrait{
             padding: 10px 60px 20px 60px;
 
@@ -108,7 +117,8 @@
                 padding-right: 30px;
             }
 
-            .indonesia, .nepal{
+            //Se añade margen a las culturas que están a la izquierda para separarlas de la columna derecha
+            .indonesia, .china{
                 margin-right: 10px;
             }
         }
@@ -116,13 +126,14 @@
         @include if-tablet-landscape{
             padding: 10px 110px 20px 110px;
 
-            .indonesia, .nepal{
+            .indonesia, .china{
                 margin-right: 20px;
             }
          }
        
    }
    
+   /* Clase para los divs que contienen toda la información sobre las diferentes culturas*/
    .culturas{
         width: 100%;
         box-sizing: border-box;
@@ -132,55 +143,57 @@
         @include if-mobile-landscape{
             padding: 10px 10px 20px 10px;
         }
-       
         }
   
-        .nombre{
-            margin-top: 10px;
-            margin-bottom: 5px;
-        }
+    /* Ajustes para el nombre de cada cultura. No anidado porque es común a todas las culturas.
+    Lo mismo ocurre con el resto de elementos presentes a continuación.*/
+    .nombre{
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
 
-        .fecha{
+    //Sábado en el que se represena cada cultura
+    .fecha{
+         margin-bottom: 10px;
+    }
+
+    /* Ajustes generales para todos los títulos h2 de la página de programación*/
+    h2 {
+        font-size:$font-size-body; 
+        font-weight: bold;
+        color: $red;
+        margin-bottom: 10px;
+
+        @include if-tablet-portrait{
+            font-size: $font-size-h3;
             margin-bottom: 10px;
         }
 
+        @include if-tablet-landscape{
+            font-size: $font-size-h1;
+            margin-bottom: 20px;
+            }
+        }
+    /* Ajustes generales para todos los párrafos de la página de programación*/
+    p{
+        line-height: 1.6em;
 
-        h2 {
-            font-size:$font-size-body; 
-            font-weight: bold;
-            color: $red;
+        @include if-tablet-portrait {
+            font-size: $font-size-body - 2;
+        }
+
+         @include if-desktop{
+            font-size: $font-size-body; 
+         }
+    }
+     
+    //Estilo de todas las imágenes de las culturas
+    img{
+        width: 100%;
+
+        @include if-mobile-landscape{
             margin-bottom: 10px;
-
-            @include if-tablet-portrait{
-                font-size: $font-size-h3;
-                margin-bottom: 10px;
-
-            }
-
-            @include if-tablet-landscape{
-                font-size: $font-size-h1;
-                margin-bottom: 20px;
-
-            }
-        }
-        p{
-            line-height: 1.6em;
-
-            @include if-tablet-portrait {
-                font-size: $font-size-body - 2;
-             }
-
-            @include if-desktop{
-                font-size: $font-size-body; 
-            }
-        }
+         }
+    }
      
-        img{
-            width: 100%;
-
-            @include if-mobile-landscape{
-                margin-bottom: 10px;
-            }
-        }
-     
-   }
+}
